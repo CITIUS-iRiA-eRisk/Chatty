@@ -1,6 +1,8 @@
 [submodule "demo-front"]
 	path = demo-front
 	url = git@github.com:CITIUS-iRiA-eRisk/demo-front.git
+	branch = main
 [submodule "demo-back"]
 	path = demo-back
 	url = git@github.com:CITIUS-iRiA-eRisk/demo-back.git
+	branch = main
