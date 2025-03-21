@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Remote Attach",
+        "type": "python",
+        "request": "attach",
+        "connect": {
+          "host": "localhost",
+          "port": 5678
+        },
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceFolder}/demo-back",
+            "remoteRoot": "/app"
+          }
+        ]
+      },
+      {
+        "type": "node",
+        "request": "attach",
+        "name": "Next: Node",
+        "port": 9229,
+        "address": "localhost",
+        "localRoot": "${workspaceFolder}/demo-front",
+        "remoteRoot": "/app",
+        "protocol": "inspector"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full Stack: Backend + Frontend",
+        "configurations": ["Python: Remote Attach", "Next: Node"]
+      }
+    ]
+  }

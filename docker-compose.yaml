@@ -1,0 +1,88 @@
+services:
+  ollama:
+    build: 
+      context: ./ollama-custom
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  database:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  quadrant:
+    build: 
+      context: ./qdrant-custom
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - quadrant_data:/quadrant/data
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"] 
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+
+  backend:
+    build:
+      context: ./demo-back
+      dockerfile: Dockerfile
+    volumes:
+      - ./demo-back:/app
+    ports:
+      - "5000:5000"
+      - "5678:5678"  # For debugger
+    environment:
+      - OPENAI_KEY
+      - MISTRAL_KEY
+      - GEMINI_KEY
+    depends_on:
+      database:
+        condition: service_healthy
+      quadrant:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+
+
+  frontend:
+    image: node:slim
+    working_dir: /app
+    volumes:
+      - ./demo-front:/app
+    ports:
+      - "3000:3000"
+      - "9229:9229"  # For Node.js debugger
+    depends_on:
+      - backend
+    environment:
+      - BASE_PATH_BACKEND=http://backend:5000
+      - NEXTAUTH_SECRET=clave_secreta_test
+    command: >
+      sh -c "npm install &&
+             npm run build &&
+             npm start"
+
+volumes:
+  mongodb_data:
+  quadrant_data:
+  ollama_data:
