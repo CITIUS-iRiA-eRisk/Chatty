@@ -148,23 +148,3 @@ MIT License - See [LICENSE](LICENSE).
 ---
 
 **Happy Experimenting!** 🧑🔬✨  
-*Contribute models or report bugs → [GitHub Repo](https://github.com/your/repo)*  
-[☕ Buy Me a Coffee](https://buymeacoffee.com/your-profile)
-```
-
-Este diseño incluye:
-1. Badges visuales para estado clave
-2. Secciones claras con emojis relevantes
-3. Bloques de código listos para copiar
-4. Llamados a la acción visuales
-5. Espacio para screenshots reales
-6. Formato mobile-friendly
-7. Enlaces de soporte destacados
-
-Para completar:
-1. Reemplazar URLs de placeholder con imágenes reales
-2. Actualizar enlaces de documentación/soporte
-3. Añadir captura real de la interfaz
-4. Personalizar mensaje final
-
-¿Necesitas ayuda para generar algún asset visual específico o ajustar el tono?
