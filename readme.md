@@ -136,9 +136,7 @@ docker compose up -d
 
 ## 🚨 Need Help?
 
-- 📚 [Full Documentation](https://your-docs.site)  
-- 🐛 [Report Issues](https://github.com/your/repo/issues)  
-- 💬 [Join Discord](https://discord.gg/your-invite)  
+- 📚 [Full Documentation](https://citius-iria-erisk.github.io/demo-inside-the-lab/)  
 
 ## 📜 License
 
