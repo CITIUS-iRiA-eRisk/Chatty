@@ -20,8 +20,6 @@
 Create a file with this content:
 
 ```yaml
-version: '3.8'
-
 services:
   ollama:
     image: manuc1k/demo-inside-the-lab-ollama:latest
@@ -59,7 +57,6 @@ services:
 
   backend:
     image: manuc1k/demo-inside-the-lab-backend:latest
-    environment:
     depends_on:
       database:
         condition: service_healthy
