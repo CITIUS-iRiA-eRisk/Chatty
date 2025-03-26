@@ -1,2 +1,4 @@
 venv/
 .env
+.front_env
+.back_env
