@@ -5,7 +5,7 @@ This documentation will guide you through the process of setting up and using ou
 Chatty the Lab is an experimental playground that lets you:
 
 - Compare multiple AI models side-by-side from different providers (Ollama, Hugging Face, OpenAI, etc.)
-- Configure custom context windows and model parameters
+- Configure custom context for different models to take on various roles
 - Analyze differences in model behavior through parallel outputs
 
 ## Application Architecture
