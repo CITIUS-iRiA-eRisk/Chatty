@@ -39,7 +39,7 @@ graph TD
 *Settings panel screenshot*
 
 1. **Choose Models** - Local (Ollama) vs Cloud (OpenAI) vs Open Source (HF)
-2. **Set Parameters** - Temperature, Max Tokens, Context Window
+2. **Select Context** - Choose from predefined scenarios or roles
 3. **Prompt** - Type or paste your text
 4. **Compare** - Side-by-side outputs with token counters
 
@@ -47,7 +47,7 @@ graph TD
 
 - 🔄 **Multi-provider support** - Ollama, OpenAI, Hugging Face, Anthropic
 - ⚡ **Real-time comparisons** - View 2-4 model outputs simultaneously
-- 🧠 **Context playground** - Adjust window size, temperature, max tokens
+- 🧠 **Context playground** - Select custom contexts for model role impersonation
 - 📦 **One-click deploy** - Fully Dockerized stack (MongoDB + Qdrant included)
 - 📊 **Export results** - CSV/JSON formats for analysis
 
