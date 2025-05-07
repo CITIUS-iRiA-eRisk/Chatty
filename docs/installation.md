@@ -142,10 +142,3 @@ ollama:
 
 
 
-
-
-## ⏳ Next Steps
-
-- [Configure your first experiment](usage.md)
-- [Production deployment guide](deployment.md)
-- [Troubleshooting common issues](troubleshooting.md)
