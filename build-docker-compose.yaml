@@ -27,7 +27,7 @@ services:
       retries: 5
       start_period: 60s
 
-  quadrant:
+  qdrant:
     build:
       context: ./qdrant-custom
     healthcheck:
@@ -41,11 +41,12 @@ services:
     build:
       context: ./demo-back
       dockerfile: Dockerfile
-
+      secrets:
+          - hf_token
     depends_on:
       database:
         condition: service_healthy
-      quadrant:
+      qdrant:
         condition: service_healthy
       ollama:
         condition: service_healthy
@@ -61,5 +62,11 @@ services:
 
 volumes:
   mongodb_data:
-  quadrant_data:
+  qudrant_data:
   ollama_data:
+
+secrets:
+  hf_token:
+    environment: HF_TOKEN
+  
+
