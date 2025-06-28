@@ -17,6 +17,12 @@ graph TD
     Backend -->|Vector Search| Qdrant[(Qdrant)]
     Backend -->|AI Processing| Ollama["Ollama AI"]
     Backend -->|Uses| HF["Hugging Face API"]
+    
+    %% Uso de otras APIs de AI
+    Backend -->|Uses| OpenAI["OpenAI API"]
+    Backend -->|Uses| Mistral["Mistral API"]
+    Backend -->|Uses| Gemini["Gemini API"]
+
     Ollama -->|Optionally uses| GPU[(GPU Acceleration)]
 
     %% Agrupar en entorno Docker
