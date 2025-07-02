@@ -64,6 +64,9 @@ markdown_extensions:
   - pymdownx.tabbed
   - attr_list
   - md_in_html
+  
+plugins:
+    - mkdocs-video
 
 copyright: |
   &copy; 2025 <a href="https://github.com/CITIUS-iRiA-eRisk/demo-inside-the-lab"  target="_blank" rel="noopener">Manuel Couto Pintos</a>
