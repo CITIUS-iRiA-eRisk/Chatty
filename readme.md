@@ -139,7 +139,7 @@ docker compose up -d
 
 ## 🚨 Need Help?
 
-- 📚 [Full Documentation](https://citius-iria-erisk.github.io/demo-inside-the-lab/)  
+- 📚 [Full Documentation](https://citius-iria-erisk.github.io/Chatty)  
 
 ## 📜 License
 
